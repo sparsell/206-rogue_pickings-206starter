@@ -2,18 +2,20 @@
 	font-family: 'Wisdom Script';
 	src: url('../fonts/wisdom-script.otf') format('opentype');
 }
+html {
+	font-size: 16px;
+}
 
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 1em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.container{
-	/*max-width: 480px;
-	margin: 0 auto;*/
+.container {
+	margin: 0 auto;
 }
 
 h1,
@@ -45,9 +47,8 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	/*height: 110px;*/
-	border-bottom: 3px solid #77a466;
-	/*margin: 0 auto;*/
+	width: 90%;
+	margin: 0 auto;
 }
 
 header h1 {
@@ -55,18 +56,15 @@ header h1 {
 	justify-content: center;
 	flex-wrap: wrap;
 	border-bottom: 3px solid #77a466;
-	/*margin: 0;
-	padding: 38px 0;*/
+	padding: 38px 0;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	/*float: right;*/
 	display: flex;
 	justify-content: center;
-	/*padding: 46px 0;*/
 }
 header nav ul {
 	display: flex;
@@ -96,24 +94,27 @@ header nav ul li a{
 
 .main-image {
 	height: auto;
-	float: left;
 }
+
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
+	border-top: 3px solid #77a466;
+	margin: auto;
 }
 
 .main-title {
 	height: auto;
 	float: left;
+	padding-left; 10px;
 }
 .main-title h3 {
 	text-align: left;
-	padding: 5px 0;
+	padding: 10px;
 	color: #77a466;
 }
 .main-title p {
-	padding: 0;
+	padding: 10px;
 	font-size: 16px;
 	line-height: 25px;
 }
@@ -121,14 +122,14 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	/*width: 33%;*/
 	height: auto;
-	float: left;
+	/*float: left;*/
 	border-top: 1px solid #eee;
 }
 
 .section-one h4 {
-	padding: 10px 0;
+	padding: 10px 30px;
 }
 
 .section-two {
@@ -143,10 +144,10 @@ header nav ul li a{
 
 .menu {
 	list-style: none;
-	padding: 0;
+	padding: 0px;
 }
 .menu li {
-	padding: 10px 0;
+	padding: 10px 30px;
 	color:#77a466;
 }
 
@@ -179,9 +180,44 @@ footer span {
 
 /* Tablet styles **/
 
-@media 
+@media all and (min-width: 768px) {
 
+	header nav {
+	display: flex;
+	justify-content: center;
+}
 
+.section-one,
+.section-two,
+.section-three {
+	width: 33%;
+	height: auto;
+	float: left;
+}
 /** Desktop styles **/
 
-@media	
+@media all and (min-width: 1200px)	 {
+
+header {
+	height: 110px;
+	margin: 0 auto;
+}
+
+	header h1 {
+		float: left;
+		margin: 0;
+		padding: 38px 0;
+		border: none;
+	}
+
+	header nav {
+	float: right;
+	padding: 46px 0;
+}
+
+header nav ul {
+	/*margin: 0;
+	padding: 0;*/
+	display: inline;
+}
+}
