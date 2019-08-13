@@ -106,7 +106,7 @@ header nav ul li a{
 .main-title {
 	height: auto;
 	float: left;
-	padding-left; 10px;
+	padding-left: 10px;
 }
 .main-title h3 {
 	text-align: left;
@@ -216,8 +216,10 @@ header {
 }
 
 header nav ul {
-	/*margin: 0;
-	padding: 0;*/
-	display: inline;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
 }
 }
