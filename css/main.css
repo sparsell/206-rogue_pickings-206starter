@@ -15,7 +15,12 @@ body {
 }
 
 .container {
-	margin: 0 auto;
+	max-width: 1200px;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -45,32 +50,38 @@ p {
     padding: 0 2.14em;
 }
 
+ul {
+	margin: 0;
+}
+
 /*The widths are in a percentage!*/
 header {
-	width: 90%;
-	margin: 0 auto;
+	border-bottom: 3px solid #77a466;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 header h1 {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
 	border-bottom: 3px solid #77a466;
-	padding: 38px 0;
+	padding: 38px 20px 20px 20px;
+	width: 100%;
+	padding: 38px 0 20px 20px;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	display: flex;
-	justify-content: center;
+	padding: 20px 0; 
+    width: 100%;
 }
 header nav ul {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	margin: 0;
+	padding: 0;
 	line-height: 2.2em;
 
 }
@@ -78,7 +89,7 @@ header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	padding: 0 10px;
-	display: inline;
+	list-style: none;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -88,8 +99,10 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	margin: 0 auto;
-	clear: both;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 .main-image {
@@ -99,8 +112,6 @@ header nav ul li a{
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
-	border-top: 3px solid #77a466;
-	margin: auto;
 }
 
 .main-title {
@@ -115,26 +126,19 @@ header nav ul li a{
 }
 .main-title p {
 	padding: 10px;
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 1em;
+	line-height: 1.5625em;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	/*width: 33%;*/
-	height: auto;
-	/*float: left;*/
+	width: 100%;
 	border-top: 1px solid #eee;
 }
 
 .section-one h4 {
 	padding: 10px 30px;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
 }
 
 .section-two h4,
@@ -153,73 +157,76 @@ header nav ul li a{
 
 .reviews {
 	color: #333;
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 1em;
+	line-height: 1.3125em;
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1em;
+	line-height: 1.5625em;
 }
 
 /*The widths are in a percentage!*/
 footer {
-	height: 50px;
 	border-top: 3px solid #eee;
-	margin: 0 auto;
-	clear: both;
 	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: .875em;
 }
 
 
 /* Tablet styles **/
 
 @media all and (min-width: 768px) {
-
-	header nav {
-	display: flex;
-	justify-content: center;
+.bottom-section {
+	justify-content: space-between;
+	align-items: flex-start;
+	border-top: 1px solid #eee;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
-	height: auto;
-	float: left;
+	flex-basis: 30%;
+	border-top: none;
 }
+
+.section-two {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	padding: 0 20px;
+}
+}
+
 /** Desktop styles **/
 
 @media all and (min-width: 1200px)	 {
 
 header {
-	height: 110px;
-	margin: 0 auto;
+	justify-content: space-between;
 }
-
 	header h1 {
-		float: left;
+		
+		width: 30%;
 		margin: 0;
-		padding: 38px 0;
-		border: none;
+		border-bottom: none;	
 	}
 
 	header nav {
-	float: right;
-	padding: 46px 0;
-}
+	width: 40%;
+} 
 
 header nav ul {
-	margin: 0;
-	padding: 0;
 	display: flex;
 	justify-content: space-between;
-	flex-direction: row;
 }
 }
