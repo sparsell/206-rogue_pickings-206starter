@@ -56,7 +56,6 @@ ul {
 
 /*The widths are in a percentage!*/
 header {
-	border-bottom: 3px solid #77a466;
     text-align: center;
     width: 90%;
     display: flex;
@@ -66,7 +65,6 @@ header {
 }
 
 header h1 {
-	border-bottom: 3px solid #77a466;
 	padding: 38px 20px 20px 20px;
 	width: 100%;
 	padding: 38px 0 20px 20px;
@@ -112,6 +110,7 @@ header nav ul li a{
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
+	border-top: 3px solid #77a466;
 }
 
 .main-title {
